@@ -2,8 +2,12 @@
 The library of stepper motor SG-90.
 
 ## Methods
-`init(pin_pwm, freq)`
+```python
+init(pin_pwm, freq)
+```
 Initial configuration
 
-`example(interval)`
+```python
+example(interval)
+```
 Rotated between -90deg, 0deg and 90 deg.
