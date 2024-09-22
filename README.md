@@ -5,7 +5,7 @@ The library of stepper motor SG-90.
 ```python
 init(pin_pwm, freq)
 ```
-Initial configuration
+Initial configuration.
 
 ```python
 example(interval)
