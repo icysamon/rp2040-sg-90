@@ -1,24 +1,30 @@
 from machine import Pin, PWM
 import time
 
-duty_max = 65535
-deg_min = 0.025 # -90
-deg_middle = 0.0725 # 0
-deg_max = 0.12 # 90
+# parameters from data sheet
+duty_max = 65025
+angle_min = 0.025
+angle_middle = 0.0725
+angle_max = 0.12
 
 # init
-def init(pin_pwm = 0, freq = 50):
+def init(pin_pwm = 0, freq = 50): # do not change freq
     global servo
     servo = PWM(Pin(pin_pwm))
     servo.freq(freq)
 
 # example function
-def example(interval = 3):
-    servo.duty_u16(round(duty_max * deg_min))
-    time.sleep(interval)
+def example(sleep_time = 3):
+    servo.duty_u16(int(duty_max * angle_min))
+    time.sleep(sleep_time)
         
-    servo.duty_u16(round(duty_max * deg_middle))
-    time.sleep(interval)
+    servo.duty_u16(int(duty_max * angle_middle))
+    time.sleep(sleep_time)
         
-    servo.duty_u16(round(duty_max * deg_max))
-    time.sleep(interval)
+    servo.duty_u16(int(duty_max * angle_max))
+    time.sleep(sleep_time)
+
+# set angle
+def set_angle(angle = 90): # from 0 to 180
+    duty = angle_min + (angle_max - angle_min) / 180 * angle
+    servo.duty_u16(int(duty_max * duty))
