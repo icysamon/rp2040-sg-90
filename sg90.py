@@ -13,17 +13,6 @@ def init(pin_pwm = 0, freq = 50): # do not change freq
     servo = PWM(Pin(pin_pwm))
     servo.freq(freq)
 
-# example function
-def example(sleep_time = 3):
-    servo.duty_u16(int(duty_max * angle_min))
-    time.sleep(sleep_time)
-        
-    servo.duty_u16(int(duty_max * angle_middle))
-    time.sleep(sleep_time)
-        
-    servo.duty_u16(int(duty_max * angle_max))
-    time.sleep(sleep_time)
-
 # set angle
 def set_angle(angle = 90): # from 0 to 180
     duty = angle_min + (angle_max - angle_min) / 180 * angle
