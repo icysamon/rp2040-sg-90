@@ -14,7 +14,7 @@ set_angle(angle = 90)
 ```
 Set angle. (The parameters range from 0 to 180.)
 
-## Example Main function
+## Example Main Function
 ```python
 from machine import Pin
 import time
