@@ -1,6 +1,8 @@
 # SG-90
 Library of stepper motor SG-90.
 
+![](picture.png)
+
 ## Example (Python)
 ```python
 from machine import Pin
