@@ -1,5 +1,5 @@
 # SG-90
-A stepper motor SG-90 C/Python Library of Raspberry Pi Pico.
+A servo motor SG-90 C/Python Library of Raspberry Pi Pico.
 
 ![](picture.png)
 
