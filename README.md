@@ -1,5 +1,5 @@
 # SG-90
-This is a stepper motor SG-90 driver for raspberry pi pico.
+A stepper motor SG-90 Python/C Library of Raspberry Pi Pico.
 
 ![](picture.png)
 
