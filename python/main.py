@@ -13,4 +13,3 @@ if __name__ == "__main__":
         time.sleep(3)
         sg90.set_angle(90)
         time.sleep(3)
-    pass

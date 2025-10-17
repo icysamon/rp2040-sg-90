@@ -1,5 +1,4 @@
 from machine import Pin, PWM
-import time
 
 # parameters from data sheet
 duty_max = 65025
