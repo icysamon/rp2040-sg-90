@@ -3,7 +3,7 @@ This is a stepper motor SG-90 driver for raspberry pi pico.
 
 ![](picture.png)
 
-## Example (Python)
+## Example Demo - Python
 ```python
 from machine import Pin
 import time
@@ -20,10 +20,12 @@ if __name__ == "__main__":
         time.sleep(3)
         sg90.set_angle(90)
         time.sleep(3)
-    pass
 ```
 
-## Example (C Language)
+## Example Demo - C
+In this project, we put `sg90.c` and `sg90.h` into the `/src/` directory.
+
+### main.c
 ```c
 /**
  * Copyright (c) 2020 Raspberry Pi (Trading) Ltd.
@@ -87,3 +89,6 @@ int main() {
     }
 }
 ```
+
+### CMakeLists.txt
+You must add `sg90.c` to the `add_executable()` and include `hardware_pwm` in the  `target_link_libraries()` on your `CmakeLists.txt` file.
